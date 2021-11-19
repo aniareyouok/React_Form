@@ -7,47 +7,55 @@ function App() {
         console.log("Verstuurd!")
     }
 
-  return (
-    <Fragment>
-        <h1>React Formulier</h1>
+    return (
+        <Fragment>
+            <wrapper>
+                <h1>React Formulier</h1>
 
-        <form name="gegevens">
-            <label htmlFor="gegevens">Gegevens</label>
-            <label htmlFor="name_input">Naam:</label>
-            <input
-                type="text"
-                id="name_input"
-            />
-            <label htmlFor="age_input">Leeftijd:</label>
-            <input type="number" id="age_input"/>
-        </form>
+                <form id="review" onSubmit={handleSubmit}>
+                    <fieldset>
+                        <legend> Gegevens</legend>
 
-        <form
-            id="review"
-            name="jouw_review"
-            onSubmit={handleSubmit}
-        >
-            <label htmlFor="review">Jouw review</label>
-            <label htmlFor="review_message">Opmerkingen:</label>
-            <textarea
-                id="review_message"
-                placeholder="Wat vond je van het recept?"
-            />
-            <input
-                type="checkbox"
-                id="subscribe"
-            />
-            Ik schrijf me in voor de nieuwsbrief
-            <button
-                type="submit"
-                id="submit_button"
-            >
-                Versturen
-            </button>
+                        <label htmlFor="name_input">Naam:</label>
+                        <input
+                            type="text"
+                            id="name_input"
+                        />
 
-        </form>
-    </Fragment>
-  );
+                        <label htmlFor="age_input">Leeftijd:</label>
+                        <input type="number" id="age_input"/>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Jouw review</legend>
+
+                        <label htmlFor="review_message">Opmerkingen:</label>
+                        <textarea
+                            id="review_message"
+                            placeholder="Wat vond je van het recept?"
+                        />
+
+                        <span>
+                            <input
+                                type="checkbox"
+                                id="subscribe"
+                            />
+                            Ik schrijf me in voor de nieuwsbrief
+                        </span>
+
+                        <button
+                            type="submit"
+                            id="submit_button"
+                        >
+                            Versturen
+                        </button>
+                    </fieldset>
+
+                </form>
+            </wrapper>
+        </Fragment>
+    );
 }
 
 export default App;
