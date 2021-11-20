@@ -1,72 +1,76 @@
 /*Schrijf hier jouw css voor jouw formulier*/
 
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 body {
     background-color: white;
-    margin: 0;
-    padding: 0;
-    text-align: center;
     font-family: Arial;
 }
 
-wrapper {
-    background-color: steelblue;
+.wrapper {
+    background-color: lightblue;
     border: 1px black;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px 0px #5f9ed2;
-    margin: 10px;
+    box-shadow: 2px 2px 5px 0px lightblue;
+    margin: 30px auto;
     padding: 10px;
-    width: 300px;
+    width: 325px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 h1 {
-    color: white;
+    color: #181818;
 }
 
 form {
     margin: 5px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-content: center;
-    border: solid #3d5c76 1px;
+    border: solid lightblue 1px;
     border-radius: 5px;
-    background-color: #436480;
-    color: white;
+    background-color: lightblue;
+    color: black;
     text-align: left;
     font-size: small;
+    display: flex;
+    flex-direction: column;
+
 }
 
 form input {
-    width: 200px;
+    width: 100%;
     margin-top: 5px;
     margin-bottom: 5px;
+    background-color: whitesmoke;
+}
+
+input:focus {
+    outline: none;
+    border: solid grey 2px;
 }
 
 form textarea {
-    width: 200px;
+    width: 100%;
     height: 200px;
     margin-top: 5px;
     margin-bottom: 5px;
     resize: none;
+    background-color: whitesmoke;
+}
+
+textarea:focus {
+    outline: none;
+    border: solid grey 2px;
 }
 
 form span {
     margin: 5px;
-    padding: 0px;
+    padding: 0;
     float: left;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*justify-content: left;*/
-    /*align-items: flex-start;*/
 }
 
 #subscribe {
@@ -74,14 +78,15 @@ form span {
 }
 
 form button {
-    width: 70px;
-    height: 20px;
-    border: 1px #263949 solid;
-    box-shadow: 2px 2px 5px 0 #263949;
+    width: 85px;
+    height: 30px;
+    border: none;
+    box-shadow: 2px 2px 5px 0 grey;
     border-radius: 2px;
-    background-color: steelblue;
-    color: #263949;
+    background-color: whitesmoke;
+    color: #181818;
     font-weight: bold;
     cursor: pointer;
+    float: right;
 }
 
